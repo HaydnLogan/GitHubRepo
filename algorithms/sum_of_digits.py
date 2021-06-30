@@ -12,3 +12,11 @@ def factorial(n):
 
 number = int(input('Input number: '))
 factorial(number)
+
+
+# 0(1)
+def sum2(n):
+    return (n * (n +1)) /2
+
+num = int(input("Input number: "))
+print(sum2(num))

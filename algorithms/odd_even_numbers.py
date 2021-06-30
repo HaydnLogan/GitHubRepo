@@ -35,11 +35,6 @@ def countEvenOdd(n):
 
     print("Even count : ", even_count)
     print(" Odd count : ", odd_count)
-    if (even_count % 2 == 0 and
-            odd_count % 2 != 0):
-        return 1
-    else:
-        return 0
 
 
 n = int(input('Input number: '))
