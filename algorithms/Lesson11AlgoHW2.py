@@ -8,11 +8,11 @@ Example: string = 'bbbbbcaaaaa'. Result = ‘aaaaabbbbbc’.
 
 """
 
-# str6 = "bbbbbcaaaaa"
+
 def string(str6):
     c = len(str6)
     cd = c/2
-    cr = round(cd,0)
+    cr = round(cd, 0)
     fh = str6[0:int(cr)]
     sh = str6[int(-cd):]
     print(f'Split and Swap =', sh + fh)
@@ -30,6 +30,7 @@ The string 'aabcde' contains duplicate characters and should return False.
 Hint: https://www.w3schools.com/python/python_sets.asp
 """
 
+
 def unique(str1):
     count = {}  # dictionary with all the characters
 
@@ -44,6 +45,7 @@ def unique(str1):
             return False
 
     return True
+
 
 str1 = (input('Input string to test for uniqueness: '))
 print(f'Is the string unique?', unique(str1))
