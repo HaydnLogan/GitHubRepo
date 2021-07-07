@@ -15,12 +15,14 @@ def rev_statement(statement):
 
 
 s = (input('Input statement to be reversed: '))
-n = rev_statement(s)
+l = rev_statement(s)
 
 
 def permutation(word, first_char=None):
-    if word == None or len(word) == 0: return []
-    if len(word) == 1: return [word]
+    if word == None or len(word) == 0:
+        return []
+    if len(word) == 1:
+        return [word]
 
     result = []
     first_char = word[0]
@@ -28,25 +30,27 @@ def permutation(word, first_char=None):
         result += insert(first_char, sub_word)
     return sorted(result)
 
+
 def insert(ch, sub_word):
     arr = [ch + sub_word]
-    for i in range(len(sub_word)):
-        arr.append(sub_word[i:] + ch + sub_word[:i])
+    for d in range(len(sub_word)):
+        arr.append(sub_word[d:] + ch + sub_word[:d])
     return arr
 
-n = (input('Input string permutated: '))
+
+n = (input('Input string you want to permutate: '))
 print(permutation(n))
 
 
-str = input("Input phrase for vowel and consonant count: ")
+str5 = input("Input phrase for vowel and consonant count: ")
 vowels = 0
 consonants = 0
-for i in str:
-    if(i == 'a'or i == 'e'or i == 'i'or i == 'o'or i == 'u' or
-       i == 'A'or i == 'E'or i == 'I'or i == 'O'or i == 'U' ):
+for i in str5:
+    if(i == 'a' or i == 'e' or i == 'i' or i == 'o' or i == 'u' or
+       i == 'A' or i == 'E' or i == 'I' or i == 'O' or i == 'U'):
            vowels = vowels + 1
     else:
-        consonants=consonants+1
+        consonants = consonants+1
 
 print('Vowels:', vowels, ',', "Consonants:", consonants)
 # How do I get the comma to appear closer to the vowels count?
